@@ -33,3 +33,5 @@ library(repr)
 **Data Preparation**
 
 **Characteristics of Data**: The All Years of Olympic Games project is being examined for representation through research into a variety of data sets. Occurrences (summer and winter), sport data, and art competition data are among the characteristics of the data. In addition to covering the years 1896 to 2020. From the viewpoints of visual representation and user experience, the Olympic Games data set is deemed to be worthwhile for study.
+
+One data set will be used to create the visualizations. In reviewing the data set, I decided not to add any data and to make it more applicable and realistic. However, I changed the names of the columns and their values. The data spans from 1896 to 2020 covering the following categories:
