@@ -9,12 +9,16 @@ output:
 
 # Data Visualization Project 01
 
+I really love the Olympic Games season. It is one of my favorite times of year. Many athletes become heroes for generations, standing up for their nations and, more importantly, setting an example and inspiring future generations of athletes.
+
+Through this data visualization, we can learn more about players, teams, sports, age and gender.
 
 
+> ##### **This report aims to answer the following questions**: 
 
-
-
-
+> **Which countries dominate football?** 
+> **Which countries have the most medals?** 
+> **What is the ratio of female to male Olympic attendees?**
 
 # Adding libraries to my data sets
 
