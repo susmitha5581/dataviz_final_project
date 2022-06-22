@@ -9,4 +9,5 @@ output:
 
 # Data Visualization Project 02
 
-_revised version of mini-project 02 goes here_
+A Data Analysis of the 2017 Boston Marathon Finishers
+==============================================================================
