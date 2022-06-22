@@ -9,3 +9,10 @@ output:
 
 # Data Visualization Project 01
 
+library(ggplot2) 
+library(readr)
+library(tidyverse)
+library(dplyr)
+library(plyr)
+library(rworldmap)
+library(repr)
