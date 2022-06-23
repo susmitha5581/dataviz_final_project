@@ -49,3 +49,13 @@ One data set will be used to create the visualizations. In reviewing the data se
 A user wants to know which countries earned the most medals. This is shown by stacked bars. 
 
 ![Top Countries](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/top%2010%20countries.jpg)
+
+**Here we see USA won the more Medals In the olympics**
+
+--------------------------------------------
+
+> ## **Which countries dominate football?** 
+
+It is evident that there are many sports in the olympics and many players from different countries. Here, we choose football and check the number of players from the top 10 countries.
+
+![foot_ball](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/football.jpg)
