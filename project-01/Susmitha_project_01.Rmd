@@ -46,3 +46,68 @@ One data set will be used to create the visualizations. In reviewing the data se
 
 **Team**
 
+```{r}
+df <- read.csv("C:/Users/3165182957/OneDrive - Florida Polytechnic University/Desktop/Data Visualization/mini project 1/Olympic Dataset.csv")
+
+```
+----------------------------------------------------------------------------------------------
+**Top Countries who won more Medals**
+
+A user wants to know which countries earned the most medals. This is shown by stacked bars. 
+
+```{r}
+ggplot(data= T10, aes(x=T10$Team, y=count, fill= T10$Team))+
+ 
+  geom_bar(stat = "identity", color="black") +
+  #scale_x_discrete(guide = guide_axis(n.dodge=13)) +
+  theme_classic() +
+  labs(
+    x = "Team",
+    y = "count",
+    title = paste(
+      "Top 10 countries who won more Medals"
+    )
+  )+ coord_flip()+
+
+  theme_minimal()
+  
+```
+**Here we see USA won the more Medals In the olympics**
+
+----------------------------------------------------------------------------------------
+ **Which countries dominate football?** 
+ 
+ It is evident that there are many sports in the olympics and many players from different countries. Here, we choose football and check the number of players from the top 10 countries.
+
+
+```{r}
+ggplot(top10gold_team,aes(x = Team, y = count, fill = Team)) +
+  geom_bar(stat = "identity") +
+  #scale_x_discrete(guide = guide_axis(n.dodge=13)) +
+  theme_classic() +
+  labs(
+    x = "Team",
+    y = "Count",
+    title = paste(
+      "Highest Players in Foot ball"
+    )
+  )+ coord_flip()
+```
+**The most popular game in every country is soccer. USA and Brazil have nearly equal amounts of Olympic players but the first place was occupied by Brazil.**
+---------------------------------------------------------------------------------------
+
+**What is the ratio of female to male Olympic attendees?**
+
+Sport is one of the most powerful platforms for promoting gender equality, let's see Males and Females participated in Olympics according to their Age.
+
+```{r}
+ggplot(NULL, aes(x=Year, y=freq, group=Gender, color=Gender)) +
+    geom_line(data = share_f) +
+    geom_point(data = share_f) +
+    geom_line(data = share_M) +
+    geom_point(data = share_M) +
+    ylab("Share") +
+  theme_bw()
+ ```
+ **There are more male athletes at the olympics, so the medal count is higher for male athletes than for female athletes**
+ 
