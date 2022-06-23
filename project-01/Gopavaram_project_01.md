@@ -15,3 +15,7 @@ output: html_document
 [Olympic Data ](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/data/Olympic%20Dataset.csv)**
 
 > ##### **This report aims to answer the following questions**:
+
+**Which countries dominate football?**
+**Which countries have the most medals?** 
+**What is the Share of female to male Olympic attendees?**
