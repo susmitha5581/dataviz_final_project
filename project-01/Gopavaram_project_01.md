@@ -9,4 +9,7 @@ output: html_document
 
 **"I really love the Olympic Games season. It is one of my favorite times of year. Many athletes become heroes for generations, standing up for their nations and, more importantly, setting an example and inspiring future generations of athletes."**
 
-Through this data visualization, we can learn more about players, teams, sports, age and gender.
+**Through this data visualization, we can learn more about players, teams, sports, age and gender.**
+
+**The link for the chosen Dataset is:
+[Olympic Data ](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/data/Olympic%20Dataset.csv)**
