@@ -59,3 +59,13 @@ A user wants to know which countries earned the most medals. This is shown by st
 It is evident that there are many sports in the olympics and many players from different countries. Here, we choose football and check the number of players from the top 10 countries.
 
 ![foot_ball](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/football.jpg)
+
+**The most popular game in every country is soccer. USA and Brazil have nearly equal amounts of Olympic players but the first place was occupied by Brazil.**
+
+----------------------------------------
+
+> ## **What is the ratio of female to male Olympic attendees?**
+
+Sport is one of the most powerful platforms for promoting gender equality, let's see Males and Females participated in Olympics according to their Age.
+
+![Gender](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/Gender.jpg)
