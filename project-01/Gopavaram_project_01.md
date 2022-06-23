@@ -41,3 +41,11 @@ One data set will be used to create the visualizations. In reviewing the data se
 **Medal**
 
 # It's time to talk about visualization now
+
+------------------------
+
+>## **Top Countries**
+
+A user wants to know which countries earned the most medals. This is shown by stacked bars. 
+
+![Top Countries](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/Top%2010%20countries.jpg)
