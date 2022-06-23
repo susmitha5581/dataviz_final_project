@@ -17,5 +17,7 @@ output: html_document
 > ##### **This report aims to answer the following questions**:
 
 **Which countries dominate football?**
+
 **Which countries have the most medals?** 
+
 **What is the Share of female to male Olympic attendees?**
