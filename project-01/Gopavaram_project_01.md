@@ -39,3 +39,5 @@ One data set will be used to create the visualizations. In reviewing the data se
 **Team**
 
 **Medal**
+
+# It's time to talk about visualization now
