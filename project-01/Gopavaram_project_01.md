@@ -7,4 +7,6 @@ output: html_document
 
 # Data Visualization Project 01
 
-_revised version of mini-project 01 goes here_
+**"I really love the Olympic Games season. It is one of my favorite times of year. Many athletes become heroes for generations, standing up for their nations and, more importantly, setting an example and inspiring future generations of athletes."**
+
+Through this data visualization, we can learn more about players, teams, sports, age and gender.
