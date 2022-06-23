@@ -1,10 +1,9 @@
 ---
 title: "Report for Olympic_visualization_Mini-Project 01"
-output: 
-  html_document:
-    keep_md: true
-    toc: true
-    toc_float: true
+author: "Susmitha Reddy Gopavaram - sgopavaram2200@floridapoly.edu"
+date: '2022-06-06'
+output: html_document:
+   
 ---
 
 # Data Visualization Project 01
