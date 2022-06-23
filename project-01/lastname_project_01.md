@@ -1,5 +1,5 @@
 ---
-title: "Mini-Project 01"
+title: "Report for Olympic_visualization_Mini-Project 01"
 output: 
   html_document:
     keep_md: true
