@@ -68,4 +68,4 @@ It is evident that there are many sports in the olympics and many players from d
 
 Sport is one of the most powerful platforms for promoting gender equality, let's see Males and Females participated in Olympics according to their Age.
 
-![Gender](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/who%20mon%20more%20Medals.jpg)
+![Gender](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/Share.jpg)
