@@ -37,3 +37,16 @@ Among younger runners, females outnumber males, but this bias reverses when it c
 Study findings show that runners slowed by a linear rate of about one percent each year when they were 40 to 70 years old. By the late 70s, the rate of decline for runners started declining by about 1.5 percent, and between 90 and 95, the decline accelerated to two to three percent.
 
 ![Plot2](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/plot2)
+
+Based on this graph, the average finish time in males over 54 is higher than that of all remaining ages.
+
+------------------------
+
+> ## **Top Country Participants**
+
+In this case, I intend to create a global spatial graph for 27-year-old participants around the world. 
+
+want to Know top countries Participants?
+
+![Plot3](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/plot3.jpg)
+
