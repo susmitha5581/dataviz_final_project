@@ -1,4 +1,3 @@
-
 ---
 title: "Report for Data Visualization Mini-Project 1"
 author: "Dhrishya Menon - dmenon2337@floridapoly.edu"
