@@ -1,8 +1,8 @@
 # Data Visualization and Reproducible Research
 
-> Firstname Lastname. 
+> Susmitha Reddy Gopavaram. 
 
-Learn more about me in my [GitHub profile page](https://github.com/reiminer)
+Learn more about me in my [GitHub profile page](https://github.com/susmithareddy-1996)
 
 
 The following is a sample of products created during the _"Data Visualization and Reproducible Research"_ course.
@@ -10,14 +10,19 @@ The following is a sample of products created during the _"Data Visualization an
 
 ## Project 01
 
-In the `project_01/` folder you can find... _[short description of your revised project goes here]_
+In the `project_01/` folder you can find... 
 
-**Sample data visualization:** 
+**"I really love the Olympic Games season. It is one of my favorite times of year. Many athletes become heroes for generations, standing up for their nations and, more importantly, setting an example and inspiring future generations of athletes."**
 
-_[include your favorite visualization from this project here]_
-<img src="https://github.com/reisanar/figs/raw/master/echarts.png" width="70%" height="70%">
+**Through this data visualization, we can learn more about players, teams, sports, age and gender.**
 
+**Project 1 data visualization:** 
 
+*Sport is one of the most powerful platforms for promoting gender equality, let's see Males and Females participated in Olympics according to their Age.*
+
+![Gender](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/Share.jpg)
+
+**There are more male athletes at the Olympics, so the medal count is higher for male athletes than for female athletes**
 
 
 ## Project 02
