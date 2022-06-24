@@ -43,13 +43,20 @@ from here you can find the code of the project 02
 
 ## Project 03
 
-In this project, I explored ... _[short description of your revised project goes here]_
+In this project, I explored ...**Visualizing Text and Distributions**
 
-**Sample data visualization:** 
+*In order to visualize distributions, histograms are commonly used. Bins show the frequency of values in data by grouping them into intervals or classes of equal size (i.e., intervals or classes) you can obtain a sense of the distribution of your quantitative data quantitative data.*
 
-_[include your favorite visualization from this project here]_
-<img src="https://github.com/reisanar/figs/raw/master/jackie_jessie_marion.png" width="80%" height="80%">
 
+*Graphs, charts, or word clouds are methods of representing written data in a visual manner using text visualization. An instant look at the most relevant keywords in a text provides a quick summary of content, reveals trends across documents, and summarizes content across a wide range of documents.*
+
+
+
+**My favourite density Plot**
+
+![F_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_6.jpg)
+
+----
 
 ### Moving Forward
 
