@@ -47,7 +47,7 @@ Hint: the option `binwidth = 3` was used with the `geom_histogram()` function.
 
 ![A_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_1.jpg)
 
-
+-----------------------------
 
 (b) Recreate the plot below:
 
@@ -59,6 +59,7 @@ Hint: check the `kernel` parameter of the `geom_density()` function, and use `bw
 
 ![B_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_2.jpg)
 
+------------------------------
 
 (c) Recreate the chart below:
 
@@ -70,6 +71,7 @@ Hint: default options for `geom_density()` were used.
 
 ![C_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_3.jpg)
 
+--------------------------
 
 (d) Recreate the chart below:
 
@@ -81,6 +83,7 @@ Hint: default options for `geom_density()` were used.
 
 ![D_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_4.jpg)
 
+------------------------------
 
 (e) Recreate the plot below:
 
@@ -92,6 +95,7 @@ Hint: use the`ggridges` package, and the `geom_density_ridges()` function paying
 
 ![E_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_5.jpg)
 
+------------------------------------
 
 (f) Recreate the chart below:
 
@@ -103,6 +107,8 @@ Hint: this uses the `plasma` option (color scale) for the _viridis_ palette.
 
 ![F_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_6.jpg)
 
+
+---------------------------------
 
 
 ## Part 2: Visualizing Text Data
