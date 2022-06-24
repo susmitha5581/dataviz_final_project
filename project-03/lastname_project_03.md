@@ -43,6 +43,12 @@ See https://www.reisanar.com/slides/relationships-models#10 for a reminder on ho
 
 Hint: the option `binwidth = 3` was used with the `geom_histogram()` function.
 
+## **Here is my plot which I recreated**
+
+![A_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_1.jpg)
+
+
+
 (b) Recreate the plot below:
 
 <img src="https://github.com/reisanar/figs/raw/master/tpa_max_temps_density.png" width="80%" style="display: block; margin: auto;" />
