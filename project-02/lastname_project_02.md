@@ -50,3 +50,19 @@ want to Know top countries Participants?
 
 ![Plot3](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/plot3.jpg)
 
+Here I used the [world_shapes](https://www.naturalearthdata.com/) from here and read the file with read_sf() and Based on the marathon's data, I compiled the total count of the 27-year-olds and made a visualization.
+
+We learned from the visualization that North American players had a huge number of about 20000 and were leading.
+
+---------------------------------------------------------------
+
+
+> ## **PACE**
+
+
+Want to find out the average Pace between different states in USA?
+
+You can define pace simply as your speed while running, and it is often defined as the average time it takes you to run one mile during a longer run.
+
+![Plot4](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/plot4.jpg)
+
