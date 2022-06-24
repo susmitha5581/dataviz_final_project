@@ -7,3 +7,237 @@ output: html_document
 
 # Data Visualization Project 02
 
+# Data Visualization Project 02
+
+A Data Analysis of the 2017 Boston Marathon Finishers
+==============================================================================
+
+By Susmitha Reddy Gopavaram
+ 
+June, 15, 2022
+
+**"Among the Data sets in the list, this one caught my eye. In addition to the name, age, gender, country, state, city and state (where available), the data set has the expected time, finish time and pace, overall place, division place, gender place and age place of 26410 finishers of the 2017 Boston Marathon"**.
+
+**The link for the chosen Dataset is:**
+
+[Marathon_finishers](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/data/marathon_results_2017.csv)
+
+Here I am going to read the data Set with read.csv
+
+
+```r
+options(warn=-1)
+df <- read.csv("C://Users//3165182957//OneDrive - Florida Polytechnic University//Desktop//Data Visualization//Mini project_2//data//marathon_results_2017.csv", header = TRUE)
+```
+
+**Cleaning the data set**
+
+During data cleansing, all the existing data in a database is reviewed and deleted or updated if it is outdated, incomplete, incorrect, improperly formatted, duplicate, or irrelevant. Data cleansing usually involves cleaning up data compiled in one area.
+
+Here I use na.omit() to drop my null values in the data set
+
+
+```r
+complete_records <- na.omit(df)
+```
+**Libraries used in the data visualization**
+
+```r
+library(chron)
+options(warn = -1)
+df$`X5K` <- chron(times=df$`X5K`)
+df$`X10K` <- chron(times = df$`X10K`)
+df$`X15K` <- chron(times = df$`X15K`)
+df$`X20K` <- chron(times = df$`X20K`)
+df$Half <- chron(times = df$Half)
+df$`X25K` <- chron(times = df$`X25K`)
+df$`X35K` <- chron(times = df$`X35K`)
+df$`X40K` <- chron(times = df$`X40K`)
+df$Pace <- chron(times = df$Pace)
+
+df[df$Official.Time != 0, ]
+````
+--------------------
+
+> ## **Finishers by Age and Gender**
+
+ **Which finishers took the top spot?**
+
+In general, both male and female endurance runners experience significant declines in performance with advancing age, but the magnitude is greater for female runners.
+
+
+```{r}
+by(df$Age, df$M.F, summary)
+```
+
+Among the finishing age ranges for men and women, the youngest was 18 and the oldest was 83.
+
+
+```{r}
+library(ggplot2)
+library(ggthemes)
+library(plotly)
+library(htmlwidgets)
+
+options(warn= -1)
+
+finishers_plot <-ggplot(aes(x = Age, fill = M.F), data = df) +
+  geom_histogram(bins = 30, position = position_dodge()) +
+  scale_x_continuous(breaks = round(seq(min(df$Age), max(df$Age), 
+                                        by = 5),10)) +
+  theme_economist() +
+  ggtitle('Finishers by age and gender')
+ggplotly(finishers_plot)
+
+```
+Among younger runners, females outnumber males, but this bias reverses when it comes to older runners, who tend to run at an age that is suitable for both genders. Here I created a Interactive Plot in X axies we give the Age and y axies we took count to know the number of Males and Female runner's and their count
+
+
+```{r}
+library(ggthemes)
+ggplot(aes(x=M.F, y=Age, fill=M.F), data = df) +
+  geom_boxplot() +
+  theme_economist() +
+  ggtitle('Finishers Boxplot by Age and Gender')
+```
+
+The median, first quartile, and third quartile finishers are younger than the male finishers.
+
+
+```{r}
+# Create a new column for age group
+df$age_group <- cut(df$Age, breaks=c(17,25,40,83), labels=c("18-25","26-40","41-83"))
+
+library(dplyr)
+
+options(warn=-1)
+
+gender_age_group <- group_by(df, M.F, age_group)
+df_age_gender <- dplyr::summarise(gender_age_group, 
+                count = n(), average_time = mean(Official.Time))
+
+```
+
+
+Study findings show that runners slowed by a linear rate of about one percent each year when they were 40 to 70 years old. By the late 70s, the rate of decline for runners started declining by about 1.5 percent, and between 90 and 95, the decline accelerated to two to three percent.
+
+```{r}
+options(warn=-1)
+
+group_mean <- group_by(df, Age, M.F)
+df_mean <- dplyr::summarise(group_mean, count = n(),
+                                  mean = mean(Official.Time))
+             
+df_mean$mean <- 60 * 24 * as.numeric(mean(df_mean$mean))
+
+finish_time <- ggplot(aes(x = Age, y=count, color=M.F), data = df_mean) +
+  geom_point() + geom_line() +
+  ylab('Average Finish Time(mins)') +
+  ggtitle('Finish Time Trend by Age and Gender')
+
+ggplotly(finish_time)
+
+```
+
+> ## **Top Country Participants**
+
+In this case, I intend to create a global spatial graph for 27-year-old participants around the world. 
+
+want to Know top countries Participants?
+
+```{r }load-libraries-data, warning=FALSE, message=FALSE}
+library(sf)
+library(tidyverse) 
+
+options(warn = -1)
+
+# Load world shapefile from Natural Earth
+# https://www.naturalearthdata.com/downloads/110m-cultural-vectors/
+world_shapes <- read_sf("C://Users//3165182957//OneDrive - Florida Polytechnic University//Desktop//Data Visualization//Mini project_2//data//ne_110m_admin_0_countries//ne_110m_admin_0_countries.shp")
+```
+
+```{r}
+runners_time <- df %>%
+   filter(Age == 27)
+
+runners_time_country_count <- df %>%
+                              group_by(Country)  %>%
+                    summarise(total_count = n())
+
+world_country <- world_shapes %>%
+   left_join(runners_time_country_count, by = c("ADM0_A3" = "Country"))
+
+ggplot() +
+ geom_sf(data = world_country, aes(fill = total_count),
+ color = "white", size = 0.75) +  ggtitle("Number of Participant's who age is 27 from each country ") +
+ coord_sf(crs = "+proj=robin")
+```
+
+Here I used the [world_shapes](https://www.naturalearthdata.com/) from here and read the file with read_sf() and Based on the marathon's data, I compiled the total count of the 27-year-olds and made a visualization.
+
+We learned from the visualization that North American players had a huge number of about 20000 and were leading.
+
+---------------------------------------------------------------
+
+> ## **PACE**
+
+
+Want to find out the average Pace between different states in USA?
+
+You can define pace simply as your speed while running, and it is often defined as the average time it takes you to run one mile during a longer run.
+
+```{r}
+library(chron)
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+
+options(warn=-1)
+
+# ,'BRA','GBR','CAN','BRA','CHN','GER'
+selected_countries = c('USA')
+selected_states = c('AK',"FL","CA","WA","CO","CT")
+df_selected_countries = df[(df$Country %in% (selected_countries)),]
+df_selected_countries = df[(df$State %in% (selected_states)),]
+df_selected_countries <- na.omit(df_selected_countries)
+
+df_selected_countries_stats =df_selected_countries[,c("Country",'State','age_group',"X5K","Pace","X10K")]
+
+df_selected_countries_stats_t1 = df_selected_countries_stats %>% group_by(Country,State,age_group)  %>% 
+  summarise(avg_pace = mean(times(Pace)),
+            avg_5k = mean(times(X5K)),
+            avg_10k = mean(times(X10K)),
+            )
+
+df_selected_countries_stats_t1$avg_pace_10k_secs <- apply(df_selected_countries_stats_t1, 1, FUN = function(x) period_to_seconds(hms(x[6])) )
+
+df_selected_countries_stats$avg_pace_10k_secs <- apply(df_selected_countries_stats, 1, FUN = function(x) period_to_seconds(hms(x[6])) )
+
+
+df_selected_countries_stats_t1 %>% ggplot(aes(x = State, y = avg_pace_10k_secs)) + geom_point(aes(colour = age_group)) + facet_wrap( ~ age_group) #geom_smooth(method='lm') 
+
+```
+The average paces of athletes in six different states are compared. These are (Arkansas, California, Colorado, Connecticut, Florida, Washington); in every age group, Arkansas is lower than other states, whereas the average pace of 41-83 is fairly similar, but there are huge differences in the other age groups.
+
+----------------------------------------------------------------------
+
+> ## **Finishers by Age_Group**
+
+```{r}
+library(ggrepel)
+library(ggthemes)
+library(plotly)
+omit_records <- na.omit(df_age_gender)
+
+age_gender <-ggplot(df_age_gender,
+ aes(x =age_group , y = count)) +
+  geom_point(aes(color = M.F)) +
+ geom_text_repel(aes(label = M.F))+
+  theme_economist() +
+  ggtitle('Finishers by age group and gender')
+age_gender
+#ggplotly(age_gender)
+
+```
+There are separate classes for the ages 18-25, 26-40, 41-80
+I then found the count of Males and Females in age groups, and in y axis I calculated the total number of each.
