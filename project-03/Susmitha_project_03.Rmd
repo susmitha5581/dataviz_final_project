@@ -158,4 +158,63 @@ Trying to visualize text data using Billboard Top 100 Lyrics datasets was part 2
 
 - [Billboard Top 100 Lyrics](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/data/BB_top100_2015.csv)
 
+**Here I read the csv file**
 
+```{r}
+library(tidytext)
+bill_100 <- read_csv("https://raw.githubusercontent.com/reisanar/datasets/master/BB_top100_2015.csv")
+```
+**Here I vizualize the Words in the rank of 1 to 10**
+
+```{r}
+board_100 <- bill_100%>%
+  filter(Rank %in% 1:10) %>%
+  unnest_tokens(word, Lyrics, token = "words") %>%
+  filter(!word %in% stop_words$word, str_detect(word, "[a-z]"))
+board_100
+
+word_viz <- board_100 %>%
+  group_by(word) %>%
+  summarise(uses=n()) %>%
+  arrange(desc(uses)) %>%
+  slice(1:10) %>%
+  ggplot() +
+  geom_bar(aes(x=word, y=uses, fill= word),
+           stat = "identity") +
+  coord_flip() +
+  theme_minimal()
+word_viz
+
+  ```  
+  **Here I took 5 songs and get to know the words ount in the vizualization**
+  
+```{r}
+bill_100 <- read_csv("https://raw.githubusercontent.com/reisanar/datasets/master/BB_top100_2015.csv")
+top_5 <- bill_100 %>% mutate(
+  Song = factor(Song, levels = c("uptown funk", 
+                                 "thinking out loud", 
+                                 "see you again",
+                                  "sugar", 
+                                 "trap queen",
+                                 "featuring"
+                                 )))
+head(top_5, 6)
+
+hp_tokens <- top_5 %>% 
+  unnest_tokens(word, Artist) %>%
+  anti_join(stop_words, by = "word") %>% # remove stopwords
+  group_by(Song) %>% 
+  count(word, sort = TRUE) %>% 
+  top_n(9, n) %>% 
+  ungroup() %>% 
+  mutate(word = fct_inorder(word))
+# create a bar plot showing the token frequency
+ggplot(hp_tokens, aes(x = n, y = fct_rev(word), fill = Song)) +
+  geom_col() +
+  guides(fill = FALSE) +
+  labs(x = NULL, y = NULL) +
+  scale_fill_viridis_d() +
+  facet_wrap(vars(Song), scales = "free_y") +
+  theme_minimal()
+```
+**Here we can see the count's of words**
