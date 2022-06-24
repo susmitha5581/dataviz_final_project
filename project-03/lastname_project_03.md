@@ -117,7 +117,7 @@ Review the set of slides (and additional resources linked in it) for visualizing
 
 **"Trying to visualize text data using Billboard Top 100 Lyrics datasets was part 2 of the project"**
 
-Make sure to include a copy of the dataset in the `data/` folder, and reference your sources if different from the ones listed below:
+This the Data set which I have been used for the Visualization
 
 - [Billboard Top 100 Lyrics](https://github.com/reisanar/datasets/blob/master/BB_top100_2015.csv)
 
