@@ -64,5 +64,5 @@ Want to find out the average Pace between different states in USA?
 
 You can define pace simply as your speed while running, and it is often defined as the average time it takes you to run one mile during a longer run.
 
-![Plot4](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/plot4.jpg)
+![Plot4](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/plo4.jpg)
 
