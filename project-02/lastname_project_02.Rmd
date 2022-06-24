@@ -1,5 +1,5 @@
 ---
-title: "Olympic_Mini-Project 02"
+title: "Mini-Project 02"
 author: "Susmitha Gopavaram - sgopavaram2200@floridapoly.edu "
 date: '2022-06-15'
 output: 
