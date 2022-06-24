@@ -1,8 +1,10 @@
 ---
-title: "Data Visualization Mini-Project 2"
-author: "Susmitha Gopavaram- sgopavaram2200@floridapoly.edu "
-date: '2022-06-05'
-output: html_document
+title: "Olympic_Mini-Project 02"
+output: 
+  html_document:
+    keep_md: true
+    toc: true
+    toc_float: true
 ---
 
 # Data Visualization Project 02
