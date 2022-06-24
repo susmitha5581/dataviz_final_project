@@ -121,3 +121,7 @@ This the Data set which I have been used for the Visualization
 
 - [Billboard Top 100 Lyrics](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/data/BB_top100_2015.csv)
 
+**Here I vizualize the Top Words in the rank of 1 to 10**
+
+- [Billboard 1](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot2_1.jpg)
+
