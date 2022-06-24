@@ -66,3 +66,10 @@ You can define pace simply as your speed while running, and it is often defined 
 
 ![Plot4](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/plo4.jpg)
 
+The average paces of athletes in six different states are compared. These are (Arkansas, California, Colorado, Connecticut, Florida, Washington); in every age group, Arkansas is lower than other states, whereas the average pace of 41-83 is fairly similar, but there are huge differences in the other age groups.
+
+----------------------------------------------------------------------
+
+> ## **Finishers by Age_Group**
+
+![Plot5](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/plot5.jpg)
