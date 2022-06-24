@@ -119,12 +119,5 @@ Review the set of slides (and additional resources linked in it) for visualizing
 
 This the Data set which I have been used for the Visualization
 
-- [Billboard Top 100 Lyrics](https://github.com/reisanar/datasets/blob/master/BB_top100_2015.csv)
+- [Billboard Top 100 Lyrics](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/data/BB_top100_2015.csv)
 
-- [RateMyProfessors comments](https://github.com/reisanar/datasets/blob/master/rmp_wit_comments.csv)
-
-- [FL Poly News 2020](https://github.com/reisanar/datasets/blob/master/poly_news_FL20.csv)
-
-- [FL Poly News 2019](https://github.com/reisanar/datasets/blob/master/poly_news_FL19.csv)
-
-(to get the "raw" data from any of the links listed above, simply click on the `raw` button of the GitHub page and copy the URL to be able to read it in your computer using the `read_csv()` function)
