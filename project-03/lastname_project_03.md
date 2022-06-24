@@ -19,7 +19,7 @@ Using the dataset obtained from FSU's [Florida Climate Center](https://climatece
 
 ```r
 library(tidyverse)
-weather_tpa <- read_csv("https://github.com/reisanar/datasets/raw/master/tpa_weather_16_17.csv")
+weather_tpa <- read_csv("https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/data/tpa_weather_16_17.csv")
 # random sample 
 sample_n(weather_tpa, 4)
 ```
