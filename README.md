@@ -27,7 +27,11 @@ In the `project_01/` folder you can find...
 
 ## Project 02
 
-In this project, I explored ... _[short description of your revised project goes here]_ Find the code and report in the `project_02/` folder.
+By far the most notable benefits are improvements in cardiovascular fitness and muscular endurance. Other less commonly publicized positive effects are weight loss and mental health changes such as improvement in mood, self-esteem, reductions of anxiety and relationship bonding with training partners.
+
+from here you can find the code of the project 02 
+
+**[Marathon_finishers]**(https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/data/marathon_results_2017.csv), This is the data set what I used
 
 **Sample data visualization:** 
 
