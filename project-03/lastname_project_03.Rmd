@@ -33,12 +33,46 @@ See https://www.reisanar.com/slides/relationships-models#10 for a reminder on ho
 knitr::include_graphics("https://github.com/reisanar/figs/raw/master/tpa_max_temps_facet.png")
 ```
 
+```{r}
+library(ggridges)
+library(ggplot2)
+library(viridis)
+library(tidyverse)
+library(forcats)
+library(viridisLite)
+library(lubridate)
+
+tpa_clean <- weather_tpa %>%
+  unite("doy", year, month, day, sep = "-") %>%
+  mutate(doy = ymd(doy), 
+         max_temp = as.double(max_temp), 
+         min_temp = as.double(min_temp), 
+         precipitation = as.double(precipitation))
+ggplot(data = weather_tpa)+
+  geom_histogram(aes(x= max_temp,fill = as.factor(month)),binwidth = 3, color = "white")+
+  theme_bw()+
+  scale_fill_viridis(discrete = TRUE)+
+  facet_wrap(~fct_reorder(month.name[month], month)) +
+  theme(legend.position = "none") +
+  labs(x = "Maximum Temperatures", y = "Number of Days")
+```
+
 Hint: the option `binwidth = 3` was used with the `geom_histogram()` function.
 
 (b) Recreate the plot below:
 
 ```{r, echo = FALSE, out.width="80%", fig.align='center'}
 knitr::include_graphics("https://github.com/reisanar/figs/raw/master/tpa_max_temps_density.png")
+```
+
+
+```{r}
+plot_2<-ggplot(data = weather_tpa) +
+  geom_density(aes(max_temp),bw = .5, kernel = "epanechnikov",
+               color = "#2f2f2f", fill = "#7f7f7f",
+               size = 1) +
+  theme_minimal() +labs(x = "Maximum Temperature")
+plot_2
 ```
 
 Hint: check the `kernel` parameter of the `geom_density()` function, and use `bw = 0.5`.
@@ -49,12 +83,31 @@ Hint: check the `kernel` parameter of the `geom_density()` function, and use `bw
 knitr::include_graphics("https://github.com/reisanar/figs/raw/master/tpa_max_temps_density_facet.png")
 ```
 
+
+```{r}
+plot_3<-ggplot(data = weather_tpa, aes(x = max_temp, fill = as.factor(month), alpha = 0.2)) +
+  geom_density(size = 1) + theme_bw() + scale_fill_viridis_d() +
+  facet_wrap(~fct_reorder(month.name[month], month)) +
+  theme(legend.position = "none") +
+  labs(x = "Maximum Temperatures", y = " ", title = "Density plots for each month in 2016")
+plot_3
+```
+
 Hint: default options for `geom_density()` were used. 
 
 (d) Recreate the chart below:
 
 ```{r, echo = FALSE, out.width="80%", fig.align='center'}
 knitr::include_graphics("https://github.com/reisanar/figs/raw/master/tpa_max_temps_ridges.png")
+```
+
+```{r}
+plot_4<-ggplot(weather_tpa, aes(x = max_temp, y = fct_reorder(month.name[month], month), fill = as.factor(month))) +
+  geom_density_ridges(bandwidth= 1.49, quantile_lines = TRUE, quantiles = 2, size = 1) +
+  theme_bw() + scale_fill_viridis_d() +
+  theme(legend.position = "none", panel.border = element_blank()) +
+  labs(x = "Maximum Temperature", y = "")
+plot_4
 ```
 
 Hint: default options for `geom_density()` were used. 
@@ -65,6 +118,14 @@ Hint: default options for `geom_density()` were used.
 knitr::include_graphics("https://github.com/reisanar/figs/raw/master/tpa_max_temps_ridges.png")
 ```
 
+```{r}
+plot_5<-ggplot(weather_tpa, aes(x = max_temp, y = fct_reorder(month.name[month], month), fill = as.factor(month))) +
+  geom_density_ridges(bandwidth= 1.49, quantile_lines = TRUE, quantiles = 2, size = 1) +
+  theme_bw() + scale_fill_viridis_d() +
+  theme(legend.position = "none", panel.border = element_blank()) +
+  labs(x = "Maximum Temperature", y = "")
+plot_5
+```
 Hint: use the`ggridges` package, and the `geom_density_ridges()` function paying close attention to the `quantile_lines` and `quantiles` parameters.
 
 (f) Recreate the chart below:
@@ -72,6 +133,17 @@ Hint: use the`ggridges` package, and the `geom_density_ridges()` function paying
 ```{r, echo = FALSE, out.width="80%", fig.align='center'}
 knitr::include_graphics("https://github.com/reisanar/figs/raw/master/tpa_max_temps_ridges_plasma.png")
 ```
+
+```{r}
+options(warn = -1)
+plot_6<-ggplot(weather_tpa, aes(x = max_temp, y = fct_reorder(month.name[month], month), fill = stat(x))) +
+  geom_density_ridges_gradient(bandwidth= 1.49, quantile_lines = TRUE, quantiles = 2, size = 1) +
+  theme_bw() + scale_fill_viridis_c(option = "plasma") +
+  theme(panel.border = element_blank()) +
+  labs(x = "Maximum Temperature (in Fahrenheit degrees)", y = "", fill = "")
+plot_6
+```
+
 
 Hint: this uses the `plasma` option (color scale) for the _viridis_ palette.
 
@@ -88,10 +160,4 @@ Make sure to include a copy of the dataset in the `data/` folder, and reference 
 
 - [Billboard Top 100 Lyrics](https://github.com/reisanar/datasets/blob/master/BB_top100_2015.csv)
 
-- [RateMyProfessors comments](https://github.com/reisanar/datasets/blob/master/rmp_wit_comments.csv)
 
-- [FL Poly News 2020](https://github.com/reisanar/datasets/blob/master/poly_news_FL20.csv)
-
-- [FL Poly News 2019](https://github.com/reisanar/datasets/blob/master/poly_news_FL19.csv)
-
-(to get the "raw" data from any of the links listed above, simply click on the `raw` button of the GitHub page and copy the URL to be able to read it in your computer using the `read_csv()` function)
