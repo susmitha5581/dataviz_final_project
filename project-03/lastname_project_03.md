@@ -43,7 +43,7 @@ See https://www.reisanar.com/slides/relationships-models#10 for a reminder on ho
 
 Hint: the option `binwidth = 3` was used with the `geom_histogram()` function.
 
-## **Here is my plot which I recreated**
+## **Here is my plot A which I recreated**
 
 ![A_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_1.jpg)
 
@@ -55,11 +55,21 @@ Hint: the option `binwidth = 3` was used with the `geom_histogram()` function.
 
 Hint: check the `kernel` parameter of the `geom_density()` function, and use `bw = 0.5`.
 
+## **Here is my plot B which I recreated**
+
+![B_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_2.jpg)
+
+
 (c) Recreate the chart below:
 
 <img src="https://github.com/reisanar/figs/raw/master/tpa_max_temps_density_facet.png" width="80%" style="display: block; margin: auto;" />
 
 Hint: default options for `geom_density()` were used. 
+
+## **Here is my plot C which I recreated**
+
+![C_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_3.jpg)
+
 
 (d) Recreate the chart below:
 
@@ -67,11 +77,21 @@ Hint: default options for `geom_density()` were used.
 
 Hint: default options for `geom_density()` were used. 
 
+## **Here is my plot D which I recreated**
+
+![D_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_4.jpg)
+
+
 (e) Recreate the plot below:
 
 <img src="https://github.com/reisanar/figs/raw/master/tpa_max_temps_ridges.png" width="80%" style="display: block; margin: auto;" />
 
 Hint: use the`ggridges` package, and the `geom_density_ridges()` function paying close attention to the `quantile_lines` and `quantiles` parameters.
+
+## **Here is my plot E which I recreated**
+
+![E_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_5.jpg)
+
 
 (f) Recreate the chart below:
 
@@ -79,6 +99,9 @@ Hint: use the`ggridges` package, and the `geom_density_ridges()` function paying
 
 Hint: this uses the `plasma` option (color scale) for the _viridis_ palette.
 
+## **Here is my plot B which I recreated**
+
+![F_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot_6.jpg)
 
 
 
