@@ -125,3 +125,8 @@ This the Data set which I have been used for the Visualization
 
 ![Bill_1_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot2_1.jpg)
 
+--------------------
+
+ **Here I took 5 songs and get to know the words count in the vizualization**
+ 
+ ![Bill_2_plot](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/3plot2_2.jpg)
