@@ -1,11 +1,8 @@
 ---
 title: "Visualizing Text and Distributions"
 author: "Susmitha Gopavaram- 'sgopavaram2200@floridapoly.edu"
-output: 
-  html_document:
-    keep_md: true
-    toc: true
-    toc_float: true
+date: '2022-06-06'
+output: html_document
 ---
 
 # Data Visualization Project 03
