@@ -60,4 +60,6 @@ In this project, I explored ...**Visualizing Text and Distributions**
 
 ### Moving Forward
 
-_add here a short reflection on what you learned and what you plan to continue exploring in terms of data visualization, data storytelling, reproducible research, and/or related topics_
+Business users are able to gain insights into the vast amount of data they collect. Data insights help them recognize new trends and errors. Users can pay attention to areas that indicate progress or red flags by making sense of these patterns. The business can move ahead this way.
+
+The process of displaying data in a way that can provide insights for better decisions is known as data visualization; that is, it shows how data relates to decisions. Explanatory and exploratory data visualizations exist.
