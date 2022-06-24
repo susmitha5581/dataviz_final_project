@@ -7,8 +7,9 @@ output: html_document
 
 # Data Visualization Project 03
 
+**"We have accomplished all the visualizations that the professor suggested using the hints he provided and the materials he uploaded through links and in the canvas."**
 
-In this exercise you will explore methods to visualize text data and practice how to recreate charts that show the distributions of a continuous variable. 
+In this exercise we explore methods to visualize text data and practice how to recreate charts that show the distributions of a continuous variable. 
 
 
 ## Part 1: Density Plots
