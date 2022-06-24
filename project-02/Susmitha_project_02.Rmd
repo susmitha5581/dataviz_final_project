@@ -23,7 +23,7 @@ Here I am going to read the data Set with read.csv
 
 ```{r}
 options(warn=-1)
-df <- read.csv("C://Users//3165182957//OneDrive - Florida Polytechnic University//Desktop//Data Visualization//Mini project_2//data//marathon_results_2017.csv", header = TRUE)
+df <- read.csv("https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/data/marathon_results_2017.csv", header = TRUE)
 
 ```
 
