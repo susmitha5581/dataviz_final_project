@@ -73,3 +73,6 @@ The average paces of athletes in six different states are compared. These are (A
 > ## **Finishers by Age_Group**
 
 ![Plot5](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/plot5.jpg)
+
+There are separate classes for the ages 18-25, 26-40, 41-80
+I then found the count of Males and Females in age groups, and in y axis I calculated the total number of each.
