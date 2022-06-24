@@ -31,3 +31,9 @@ In general, both male and female endurance runners experience significant declin
 Among the finishing age ranges for men and women, the youngest was 18 and the oldest was 83.
 
 ![Plot1](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/plot1)
+
+Among younger runners, females outnumber males, but this bias reverses when it comes to older runners, who tend to run at an age that is suitable for both genders. Here I created a Interactive Plot in X axies we give the Age and y axies we took count to know the number of Males and Female runner's and their count
+
+Study findings show that runners slowed by a linear rate of about one percent each year when they were 40 to 70 years old. By the late 70s, the rate of decline for runners started declining by about 1.5 percent, and between 90 and 95, the decline accelerated to two to three percent.
+
+![Plot2](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/plot2)
