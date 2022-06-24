@@ -35,10 +35,10 @@ from here you can find the code of the project 02
 
 **Sample data visualization:** 
 
-_[include your favorite visualization from this project here]_
-<img src="https://github.com/reisanar/dataviz_final_project/blob/main/figures/fl_higher_ed.png" width="60%" height="60%">
+*I enjoyed when I practice the Spatial vizualization, here you can see my favourite visualization in project 02*
 
-(you can also place your figures in the `figures/` folder and use the `![](path_to_picture)` option to add the pictures here)
+
+![Plot3](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/figures/plot3.jpg)
 
 
 ## Project 03
