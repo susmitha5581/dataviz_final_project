@@ -31,7 +31,7 @@ By far the most notable benefits are improvements in cardiovascular fitness and 
 
 from here you can find the code of the project 02 
 
-**[Marathon_finishers]**(https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/data/marathon_results_2017.csv), This is the data set what I used
+[Marathon_finishers](https://github.com/susmithareddy-1996/dataviz_final_project/blob/main/data/marathon_results_2017.csv), This is the data set what I used
 
 **Sample data visualization:** 
 
